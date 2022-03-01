@@ -6,6 +6,8 @@ Clarifai API (via machine learning face recognition), linked to a server and use
 
 ## Usage
 
+Link: https://smart-brain-lior.herokuapp.com/
+
 1. Signin/Login
 
     - Enter email and password to login or click on the register buttons to register and create an account.
