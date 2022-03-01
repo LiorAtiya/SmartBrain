@@ -4,6 +4,9 @@ This is a face recognition React application that uses the
 Clarifai API (via machine learning face recognition), linked to a server and uses the postgreSQL Database to host users
 
 
+
+<img src="images/home.PNG" width="800" height="500" >
+
 ## Usage
 
 Link: https://smart-brain-lior.herokuapp.com/
