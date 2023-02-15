@@ -18,7 +18,7 @@ class SignIn extends React.Component {
     }
 
     onSubmitSignIn = () => {
-        fetch('https://dry-crag-08848.herokuapp.com/signin', {
+        fetch('http://localhost:3015/signin', {
             method: 'post',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
@@ -63,7 +63,7 @@ class SignIn extends React.Component {
                             className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in"/>
                         </div>
                         <div className="lh-copy mt3">
-                        <p onClick={() => this.props.onRouteChange('signin')} href="#0" className="f6 link dim black db pointer">Register</p>
+                        <p onClick={() => this.props.onRouteChange('register')} href="#0" className="f6 link dim black db pointer">Register</p>
                         </div>
                     </div>
                 </main>

@@ -23,10 +23,12 @@ class Register extends React.Component {
         this.setState({name: event.target.value})
     }
 
+    //Send request to server with details
     onSubmitSignIn = () => {
-        fetch('https://dry-crag-08848.herokuapp.com/register', {
+        fetch('http://localhost:3015/register', {
             method: 'post',
             headers: {'Content-Type':'application/json'},
+            //Convert to json
             body: JSON.stringify({
                 email: this.state.email,
                 password: this.state.password,
@@ -77,7 +79,7 @@ class Register extends React.Component {
                             value="Register"/>
                         </div>
                         <div className="lh-copy mt3">
-                        <p onClick={() => onRouteChange('register')} href="#0" className="f6 link dim black db pointer">Sign In</p>
+                        <p onClick={() => onRouteChange('signin')} href="#0" className="f6 link dim black db pointer">Sign In</p>
                         </div>
                     </div>
                 </main>

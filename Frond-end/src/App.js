@@ -84,7 +84,7 @@ class App extends Component {
 
   onClickButton = () => {
     this.setState({ imageURL: this.state.input });
-    fetch('https://dry-crag-08848.herokuapp.com/imageurl', {
+    fetch('http://localhost:3015/imageurl', {
       method: 'post',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({
@@ -93,8 +93,9 @@ class App extends Component {
     })
       .then(response => response.json())
       .then(response => {
-        if(response){
-          fetch('https://dry-crag-08848.herokuapp.com/image', {
+        // if(!'unable to work with API'){
+          // console.log("status: "+response)
+          fetch('http://localhost:3015/image', {
             method: 'put',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
@@ -106,8 +107,11 @@ class App extends Component {
             this.setState(Object.assign(this.state.user, {entries: count}))
           })
           .catch(console.log)
-        }
-        this.displayFaceBox(this.calculateFaceLocation(response))
+
+          this.displayFaceBox(this.calculateFaceLocation(response))
+        // }else {
+        //   console.log('Error with Clarifai API')
+        // }
       })
       .catch(err => console.log(err))
   }
@@ -127,7 +131,6 @@ class App extends Component {
       <div className="App">
         <React.StrictMode>
           <Particles className="particles" params={particlesOptions} />
-          {/* <ContainerRow /> */}
           <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
           {route === 'home'
             ? <div>
@@ -139,7 +142,7 @@ class App extends Component {
               />
               <FaceRecognition box={box} imageURL={imageURL} />
             </div>
-            : (route === 'register'
+            : (route === 'signin'
                 ? <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
                 : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
               )
