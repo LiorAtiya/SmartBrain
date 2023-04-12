@@ -6,7 +6,7 @@ Clarifai API (via machine learning face recognition), linked to a server and use
 
 | Home Page | Register Page |
 | ------------- | ------------- |
-| <p align="center"><img width="1493" alt="Screen Shot 2023-01-06 at 11 00 23" src="images/home.PNG" width="800" height="300"></p> | <p align="center"><img width="1493" alt="Screen Shot 2023-01-06 at 11 00 23" src="images/register" width="800" height="300"></p>  |
+| <p align="center"><img width="1493" alt="Screen Shot 2023-01-06 at 11 00 23" src="images/home.PNG" width="800" height="300"></p> | <p align="center"><img width="1493" alt="Screen Shot 2023-01-06 at 11 00 23" src="images/register.png" width="800" height="300"></p>  |
 
 <h2>Getting Started</h2>
 
