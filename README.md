@@ -1,8 +1,13 @@
-# SmartBrain
+<h1 align="center"> SmartBrain </h1>
+<div align="center">
+<b align="center">Live: https://bizweb-israel.netlify.app</b>
+</div>
 
+
+<h2>Overview</h2>
 This is a face recognition React application that uses the 
 Clarifai API (via machine learning face recognition), linked to a server and uses the postgreSQL Database to host users
-
+</br></br>
 
 | Home Page | Register Page |
 | ------------- | ------------- |
