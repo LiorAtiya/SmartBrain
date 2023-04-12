@@ -1,5 +1,5 @@
 import "./App.css";
-import Particles from "react-particles-js";
+import Particles from "react-tsparticles";
 import Logo from './components/Logo/Logo';
 import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";

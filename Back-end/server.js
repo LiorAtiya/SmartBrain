@@ -10,28 +10,28 @@ const image = require('./controllers/image');
 // const profile = require('./controllers/profile')
 // const { password } = require('pg/lib/defaults');
 
-// //Connect to database - "heroku pg:psql"
-// process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
-// const db = knex({
-//   client: 'pg',
-//   connection: {
-//     connectionString: process.env.DATABASE_URL,
-//     ssl: {
-//       rejectUnauthorized: false,
-//     },
-//   }
-// })
-
-//Connect to postgreSQL
+require('dotenv').config();
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 const db = knex({
   client: 'pg',
   connection: {
-    host: 'localhost',
-    user: 'postgres',
-    password: 'mysecretpassword',
-    database: 'smartbrain',
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false,
+    },
   }
 })
+
+// //Connect to local postgreSQL
+// const db = knex({
+//   client: 'pg',
+//   connection: {
+//     host: 'localhost',
+//     user: 'postgres',
+//     password: 'mysecretpassword',
+//     database: 'smartbrain',
+//   }
+// })
 
 const app = express()
 
