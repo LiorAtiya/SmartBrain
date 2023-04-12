@@ -1,6 +1,6 @@
 <h1 align="center"> SmartBrain </h1>
 <div align="center">
-<b align="center">Live: https://bizweb-israel.netlify.app</b>
+<b align="center">Live: https://smart-brain-israel.netlify.app/</b>
 </div>
 
 
